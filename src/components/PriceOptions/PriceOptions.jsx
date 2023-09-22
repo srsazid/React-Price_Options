@@ -11,9 +11,9 @@ const PriceOptions = () => {
                 "Cardio equipment usage",
                 "Locker room access",
                 "24/7 gym access",
-                "Fitness assessment (1 session/month)"
+                "Fitness assessment "
             ],
-            "price": "$30/month"
+            "price": "$30"
         },
         {
             "id": "standard",
@@ -21,11 +21,11 @@ const PriceOptions = () => {
             "features": [
                 "All Basic Membership features",
                 "Access to group fitness classes",
-                "Personal trainer consultation (1 session/month)",
+                "Personal trainer consultation ",
                 "Sauna and steam room access",
                 "Discounts on gym merchandise"
             ],
-            "price": "$50/month"
+            "price": "$50"
         },
         {
             "id": "premium",
@@ -35,9 +35,9 @@ const PriceOptions = () => {
                 "Unlimited personal trainer sessions",
                 "Access to swimming pool",
                 "Towel service",
-                "Nutrition consultation (1 session/month)"
+                "Nutrition consultation "
             ],
-            "price": "$80/month"
+            "price": "$80"
         }
     ]
 
@@ -45,11 +45,13 @@ const PriceOptions = () => {
 
 
     return (
-        <div>
-            <h2 className="text-5xl">Best Prices in the town</h2>
-            {
-                PriceOptions.map(option => <PriceOption key={option.id} option={option}></PriceOption>)
-            }
+        <div className="m-12">
+            <h2 className="text-5xl text-center font-semibold mb-7">Best Prices in the town</h2>
+            <div className="grid md:grid-cols-3 gap-6">
+                {
+                    PriceOptions.map(option => <PriceOption key={option.id} option={option}></PriceOption>)
+                }
+            </div>
         </div>
     );
 };
